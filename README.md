@@ -4,7 +4,7 @@ This project is a student manangement system;
 The program contains an admin class which specifies all the functions that the admin can perform. A student database was created csv module in python and
 details of the students appended.
 The program allows user to sign in either as an admin or a student
-### Admin features
+<h3>Admin features</h3>
 <ul>
 <li>Add new student: The admin can add a new to student to the student database</li>
 <li>Remove student: The admin can remove a student from the student database</li>
@@ -13,5 +13,5 @@ student, their course, and every other details about the student in the database
 <li>Check total number of student: The admin can check the total number of students in the database</li>
 <li>Print student database: the admin can display all the data in the database</li>
 </ul>
-### student features
+<h3>student features</h3>
 <ul><li>Student can view courses and lectures for now</li></ul>
