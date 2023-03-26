@@ -36,7 +36,7 @@ def admin_login(admin_name,admin_id):
 
     # check if the admin details exist in the admin data base
     if (admin_name in admin.admin_name) and (admin_id in admin.admin_ids):
-        os.system("cls")
+        os.system("clear")
         # Now that the login is successful go ahead and display the functionalities an admin can perform
         print("[1] Add new student")
         sleep(.5)
@@ -52,7 +52,7 @@ def admin_login(admin_name,admin_id):
         sleep(.5)
 
         option = int(input(">>> "))
-        os.system("cls")
+        os.system("clear")
         if option == 1:
             # option 1 allows the admin to add a new student to the database taking their details
             student_name = input("Enter student's name: ")
@@ -77,7 +77,7 @@ def admin_login(admin_name,admin_id):
             return admin_login(admin_name,admin_id)
         elif option == 2:
             # option 2 allows the admin to remove a student from the DB
-            os.system("cls")
+            os.system("clear")
             reference_number = input("Enter reference number of student to remove: ")
             admin.remove_student(reference_number)
             
@@ -86,13 +86,13 @@ def admin_login(admin_name,admin_id):
 
         elif option == 3:
             # Option 3 allows the admin to print the student DB
-            os.system("cls")
+            os.system("clear")
             admin.print_student_DB()
             input("Press enter to continue")
             return admin_login(admin_name,admin_id)
         elif option == 4:
             # option 4 allows the admin to search for a student using their reference numbers
-            os.system("cls")
+            os.system("clear")
             # ask for the reference number of the student 
             reference_number = input("Enter student reference number: ")
 
@@ -103,7 +103,7 @@ def admin_login(admin_name,admin_id):
             return admin_login(admin_name,admin_id)
         elif option == 5:
             # the user choses option 5 then the admin will be able to check the total number of students in the DB
-            os.system("cls")
+            os.system("clear")
             admin.total_no_students()
 
             input("Press enter to continue")
@@ -119,7 +119,7 @@ def admin_login(admin_name,admin_id):
     else:
         print("Wrong Admin details")
         input("Press enter to retry!")
-        os.system("cls")
+        os.system("clear")
     
 # All functionalities that a student can perform are in this function
 def student_login(reference_no,index_no):
@@ -130,18 +130,18 @@ def student_login(reference_no,index_no):
     # validate student => the students reference number and index number is taken to validate them
     validate = student1.validate_student(reference_no,index_no)
     if validate == True:
-        os.system("cls")
+        os.system("clear")
         print("[1] View courses and lecturers")
         option = int(input(">>> "))
         if option == 1:
-            os.system("cls")
+            os.system("clear")
 
             #print the courses and lecturers of the student
             student1.CL()
             input("Press enter to return to the main menu")
-            os.system("cls")
+            os.system("clear")
     else:
-        os.system("cls")
+        os.system("clear")
         print("Wrong student details!")
         input("Press enter to try again")
 
@@ -168,7 +168,7 @@ def main():
         user_response = int(input(">>> "))
         if user_response == 1:
             
-            os.system("cls")
+            os.system("clear")
             # ask the student for their index number and reference number
             reference = input("Enter Reference number: ")
             index_number = input("Enter index number: ")
@@ -177,18 +177,18 @@ def main():
             student_login(reference,index_number)
 
         elif user_response == 2:
-            os.system("cls")
+            os.system("clear")
             # ask for admin details
             admin_name = input("Name:")
             admin_id = input("Password: ")
             admin_login(admin_name,admin_id)
         elif user_response == 3:
-            os.system("cls")
+            os.system("clear")
             print("Thank you for using Student Management System")
             is_true = False
         else:
             print("Invalid Response!")
-            os.system("cls")
+            os.system("clear")
             input("Press enter to retry!")
 
 main()
